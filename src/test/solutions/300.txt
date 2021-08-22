@@ -1,0 +1,1 @@
+Program([],[Assign(Id($x),IntLit(1)),FuncDecl(Id(_foo),[ParamDecl(Id($a)),ParamDecl(Id($b))],[Assign(Id($a),BinExp(+,Id($x),IntLit(1))),Assign(Id($b),BinExp(+,Id($x),IntLit(2))),Return(Id($a))])])

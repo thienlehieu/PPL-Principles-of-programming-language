@@ -1,0 +1,20 @@
+
+            define(x, 1);
+            y = array(array(1,2,3), array(3,4,5));
+            function _foo($a, $b){
+                while(true){
+                    $a = x + y[1][2];
+                    if(x >= y[1][2]){
+                        $z = $b + y[1][2];
+                    }
+                    else{
+                        break;
+                    }
+                }
+                return $a;
+            }
+            function _main(){
+                $s = _foo(x, y[1][2]) + 1;
+                return 1;
+            }
+        

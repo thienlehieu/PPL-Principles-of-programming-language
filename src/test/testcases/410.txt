@@ -1,0 +1,18 @@
+
+            define(x, 1.2);
+            define(y, array(1,2,3));
+            $z = 5.1;
+            function _foo($a, $b){
+                $z = $a + $b;
+                return $a;
+            }
+            function _foo($a, $b){
+                $z = $a - $b;
+                return;
+            }
+            function _main(){
+                $k = x + y[2];
+                x = $z + y[1];
+                return 1;
+            }
+        

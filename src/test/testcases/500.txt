@@ -1,0 +1,42 @@
+
+        define(aa, 12);
+        $k = array(1,2,3);
+        $x = 1;
+        $y = 1.1;
+        function _foo($a, $b, $q){
+            $z = array(1,2,4);
+            $a = $x + 2;
+            $y = $x + $z[1];
+            $b[1] = $x + 2;
+            while($b[1] == $z[1] + $a){
+                if($k[1] >= aa){
+                    $z[1] = $x + $k[1];
+                    return 123;
+                }
+                else{
+                    if($a == 2){
+                        $o = 1;
+                        break;
+                    }
+                }
+            }
+            foreach($k as $key => $value){
+                if($key == $x){
+                    $g = 1.1;
+                    $value = $value + aa;
+                    break;
+                }
+                elseif($z[2] >= $x){
+                    $z[2] = $z[1] + $value;
+                    return $z[2];
+                }
+                $d = $key + $value;
+            }
+        }
+        function _main(){
+            $arr = array(1,2,3);
+            $n = $x + $arr[1];
+            $int = _foo($n, $arr, $arr[2]) + aa;
+            return 1;            
+        }
+        

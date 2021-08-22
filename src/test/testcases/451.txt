@@ -1,0 +1,20 @@
+
+            $x = 1.1;
+            define(y, array(1,2,3));
+            define(q, array("a"=>1, "b"=>2));
+            $z = 5;
+            $str = "string";
+            function _foo($a, $b){
+                foreach(q as $key => $value){
+                    if($key == $str){
+                        $a = $value + $b;
+                        q[$str] = $z + $key;
+                    }
+                }
+                return 1;
+            }
+            function _main(){
+                $s = $z + 1;
+                return 1;
+            }
+        

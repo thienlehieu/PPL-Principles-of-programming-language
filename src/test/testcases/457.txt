@@ -1,0 +1,17 @@
+
+            define(x, 1);
+            $y = array("a","b","c");
+            $arr = array("a"=>1, "b"=>2);
+            $z = 1;
+            function _foo($a, $b){
+                foreach($arr as $key => $val){
+                    if($key == $y[$val]){
+                        $h = $val + $z;
+                    }
+                }
+                return 1;
+            }
+            function _main(){
+                return 1;
+            }
+        

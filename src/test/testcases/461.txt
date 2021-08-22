@@ -1,0 +1,15 @@
+
+            define(x, 1);
+            $y = array(array(1,2,3), array(1,2,3));
+            $arr = array("a"=>1, "b"=>2);
+            $z = 1;
+            function _foo($a, $b){
+                $a = $y[1] + $arr["a"];
+                $b = $y[1][2] - $arr["a"];
+                return $a + $b;
+            }
+            function _main(){
+                $t = _foo(x, $z) + 1;
+                return 1;
+            }
+        

@@ -1,0 +1,20 @@
+
+            define(x, 3);
+            define(y, array(1,2,3));
+            $z = 5.1;
+            function _foo($a, $b){
+                $a = y[1] + x;
+                $z = $a + $b;
+                return $a;
+            }
+            function _foo1($a, $b){
+                $y[1] = $a - $b;
+                x = $z + $a + $b;
+                return;
+            }
+            function _main(){
+                $k = x + y[2];
+                x = $z + y[1];
+                return 1;
+            }
+        

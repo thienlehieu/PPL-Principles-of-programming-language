@@ -1,0 +1,22 @@
+
+            define(x, 1);
+            $y = array("a","b","c");
+            $arr = array("a"=>1, "b"=>2);
+            $z = 1;
+            function _foo($a, $b){
+                foreach($arr as $key => $val){
+                    if($key ==. $y[$val]){
+                        $h = $val + $z;
+                    }
+                    elseif($val >= $z){
+                        break;
+                    }
+                    $z = $a + $b;
+                }
+                return $y[$val];
+            }
+            function _main(){
+                $t = _foo(x, $z) + 1;
+                return 1;
+            }
+        

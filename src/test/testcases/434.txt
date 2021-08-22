@@ -1,0 +1,16 @@
+
+            define(x, 3);
+            define(y, array(1,2,3));
+            define(q, array("a"=>1, "b"=>2));
+            $z = 5;
+            function _foo($a, $b){
+                foreach(q as $key => $value){
+                    $z = y[1] + $key;
+                }
+                return;
+            }
+            function _main(){
+                $s = $z + x;
+                return 1;
+            }
+        

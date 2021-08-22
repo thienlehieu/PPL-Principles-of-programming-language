@@ -1,0 +1,8 @@
+
+        $x = 1;
+        function _foo($a, $b){
+            $a = $x + 1;
+            $b = $x + 2;
+            return $a
+        }
+        

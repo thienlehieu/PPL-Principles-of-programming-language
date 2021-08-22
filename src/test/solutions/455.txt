@@ -1,0 +1,1 @@
+TypeMismatchInStmt(Assign(Id($z),BinExp(+,Id($a),ArrayAccess(Id(y),[IntLit(1)]))))

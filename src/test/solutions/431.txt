@@ -1,0 +1,1 @@
+TypeCannotBeInferred(Assign(Id($a),Id($b)))

@@ -1,0 +1,15 @@
+
+            define(x, 3);
+            define(y, array(1,2,3));
+            $z = 5;
+            function _foo($a, $b){
+                foreach(y as $key => $value){
+                    $c = $key + $h;
+                }
+                return 1;
+            }
+            function _main(){
+                $s = $z + $k;
+                return 1;
+            }
+        

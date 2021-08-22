@@ -1,0 +1,8 @@
+
+            define(x, 12);
+            function _main(){
+                $y = x + 3 ;
+                x = 2;
+                return 1;
+            }
+        

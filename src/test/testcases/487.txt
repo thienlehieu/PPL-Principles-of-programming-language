@@ -1,0 +1,26 @@
+
+            $x = 1.1;
+            define(y, array(1,2,3));
+            define(q, array("a"=>1, "b"=>2));
+            $z = 5.1;
+            function _foo($a, $b){
+                while($z >= 1){
+                    if($z == $a){
+                        foreach(q as $key => $value){
+                            $h = $b + $value;
+                            $x = $value + $a;
+                        }
+                    }
+                    elseif($z == y[1]){
+                        break;
+                    }
+                }
+                return $b;
+            }
+            function _main(){
+                $k = 1.12;
+                $s = $z + _foo($x, $k);
+                $z = $s + $k;
+                return 1;
+            }
+        

@@ -1,0 +1,14 @@
+
+            function _foo($a){
+                return;
+            }
+            function _foo2(){
+                return 1;
+            }
+            function _main(){
+                $w = 1;
+                _echo("ada");
+                _foo(str2float("1.1"));
+                return 1;
+            }
+        

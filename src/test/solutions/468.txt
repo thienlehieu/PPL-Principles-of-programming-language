@@ -1,0 +1,1 @@
+InvalidArrayLiteral(ArrayLit([AssocExp(StringLit(a),IntLit(1)),AssocExp(StringLit(b),IntLit(2)),AssocExp(IntLit(3),StringLit(c))]))

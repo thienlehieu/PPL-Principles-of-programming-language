@@ -1,0 +1,13 @@
+
+            define(x, 1);
+            $y = array("a","b","c");
+            $z = 1.1;
+            function _foo($a, $b){
+                $q = $a + $b;
+                $z = $a + x;
+                return 1;
+            }
+            function _main(){
+                return 1;
+            }
+        

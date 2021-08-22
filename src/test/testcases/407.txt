@@ -1,0 +1,10 @@
+
+            define(str, "string");
+            define(y, array(1,2,3));
+            $z = 5;
+            function _main(){
+                $k = $z + y[1];
+                y = str;
+                return 1;
+            }
+        

@@ -1,0 +1,19 @@
+
+            define(x, 3);
+            define(y, array(1,2,3));
+            $z = 5;
+            function _foo($a, $b){
+                foreach(y as $key => $value){
+                    $c = $key + $b;
+                    if($value > ($z + 1)){
+                        $m = $n*2;
+                        break;
+                    }
+                }
+                return 1;
+            }
+            function _main(){
+                $s = $z + x;
+                return 1;
+            }
+        

@@ -1,0 +1,10 @@
+
+            define(x, 1.2);
+            define(y, array(1,2,3));
+            $z = 5;
+            function _main(){
+                $k = x + y[2];
+                x = $z + y[1];
+                return 1;
+            }
+        

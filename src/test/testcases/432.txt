@@ -1,0 +1,15 @@
+
+            define(x, 3);
+            define(y, array(1,2,3));
+            $z = 5;
+            function _foo($a, $b){
+                if($a + $b){
+                    break;
+                }
+                return;
+            }
+            function _main(){
+                $s = $z + x;
+                return 1;
+            }
+        

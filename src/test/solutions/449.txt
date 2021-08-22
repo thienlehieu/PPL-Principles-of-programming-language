@@ -1,0 +1,1 @@
+TypeMismatchInStmt(Assign(Id($z),BinExp(+,Id($s),Id($k))))
