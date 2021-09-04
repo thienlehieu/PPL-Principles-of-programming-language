@@ -324,31 +324,31 @@ class StaticChecker(Visitor):
     def visitCall(self, ctx, o):
         if ctx.id.name in ["str2int", "int2str", "str2float", "float2str", "str2bool", "bool2str", "_echo", "_read"]:
             if len(ctx.param) != 1:
-                raise TypeMismatchInStmt(ctx)
+                raise TypeMismatchInExpr(ctx)
             paramType = self.checkCallStmt(ctx.param[0], o)
             if ctx.id.name == "str2int":
                 if paramType != 6:
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
                 return 3
             elif ctx.id.name == "int2str":
                 if paramType != 3:
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
                 return 6
             elif ctx.id.name == "str2float":
                 if paramType != 6:
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
                 return 4
             elif ctx.id.name == "float2str":
                 if paramType != 4:
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
                 return 6
             elif ctx.id.name == "str2bool":
                 if paramType != 6:
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
                 return 5
             elif ctx.id.name == "bool2str":
                 if paramType != 5:
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
                 return 6
             else:
                 return -1
@@ -356,7 +356,7 @@ class StaticChecker(Visitor):
         for env in o[0]:
             if ctx.id.name in env:
                 if not isinstance(env[ctx.id.name], list):
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
 
                 if o[3]:
                     if env[ctx.id.name][1] != -1:
@@ -366,7 +366,7 @@ class StaticChecker(Visitor):
                     return -2 if env[ctx.id.name][1] == 0 else env[ctx.id.name][1]
 
                 if len(ctx.param) != len(env[ctx.id.name][0]):
-                    raise TypeMismatchInStmt(ctx)
+                    raise TypeMismatchInExpr(ctx)
 
                 if len(ctx.param) > 0:
                     paramPair = zip(ctx.param, env[ctx.id.name][0])
@@ -380,10 +380,10 @@ class StaticChecker(Visitor):
                         elif actType == 0 or fPara != actType:
                             if fPara == 4:
                                 if actType not in [3, 5]:
-                                    raise TypeMismatchInStmt(ctx)
+                                    raise TypeMismatchInExpr(ctx)
                             elif fPara == 3:
                                 if actType != 5:
-                                    raise TypeMismatchInStmt(ctx)
+                                    raise TypeMismatchInExpr(ctx)
                         newParamType.append(fPara)
                     env[ctx.id.name][0] = newParamType
                     return -2 if env[ctx.id.name][1] == 0 else env[ctx.id.name][1]
@@ -396,7 +396,7 @@ class StaticChecker(Visitor):
         for exp, stmts in ctx.ifthenStmt:
             condTyp = self.checkCallStmt(exp, env)
             if condTyp != 5:
-                raise TypeMismatchInStmt(exp)
+                raise TypeMismatchInStmt(ctx)
             for stmt in stmts:
                 self.visit(stmt, env)
 
